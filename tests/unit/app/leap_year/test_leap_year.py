@@ -11,9 +11,12 @@ def test_leap_year(year: int, is_leap: str):
     assert is_leap == leap_year(year)
 
 
-def test_leap_year_exception():
-    with pytest.raises(TypeError):
-        leap_year(2000.2)
-    with pytest.raises(TypeError):
-        leap_year("2k12")
+@pytest.mark.parametrize(
+    "expected_exception, improper_input", [(TypeError, 2000.2),
+                                           (TypeError, "2k12")]
+)
+def test_leap_year_exception(expected_exception, improper_input):
+    with pytest.raises(expected_exception):
+        leap_year(improper_input)
+
 

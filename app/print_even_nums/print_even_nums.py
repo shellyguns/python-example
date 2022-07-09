@@ -15,6 +15,7 @@ def print_even_nums(num1: int, num2: int):
     return nums
 
 
+# alternative
 '''
 nums = []
 num1 = -5
@@ -30,4 +31,3 @@ if 0 in nums:
     
 print(nums)
 '''
-

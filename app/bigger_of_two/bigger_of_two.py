@@ -7,3 +7,4 @@ def bigger_of_two(num1: int, num2: int):
         return num1
     else:
         return num2
+

@@ -5,7 +5,7 @@ from app.icecream_balls.icecream_balls import icecream_balls
 @pytest.mark.parametrize(
     "quantity, available", [(1, "No"),
                             (3, "Yes"),
-                            (4, "No"),
+                            (8, "Yes"),
                             (5, "Yes")]
 )
 def test_icecream_balls(quantity: int, available: str):

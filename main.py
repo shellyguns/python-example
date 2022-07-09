@@ -1,5 +1,5 @@
 # from app.app import main
-# from app.bigger_of_two_app import main
+from app.bigger_of_two_app import main
 # from app.leap_year_app import main
 # from app.icecream_balls_app import main
 # from app.print_even_numbers_app import main

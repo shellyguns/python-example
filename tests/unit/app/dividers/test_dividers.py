@@ -4,7 +4,7 @@ from app.dividers.dividers import dividers
 
 @pytest.mark.parametrize(
     "number, num_dividers", [(1, [1]),
-                           (3, [1, 3])]
+                             (3, [1, 3])]
 )
 def test_dividers(number: int, num_dividers: list):
     assert num_dividers == dividers(number)

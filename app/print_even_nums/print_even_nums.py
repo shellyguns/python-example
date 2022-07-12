@@ -7,7 +7,7 @@ def print_even_nums(num1: int, num2: int):
         raise ValueError(f'Argument "num1"{num1} must be less than "num2"{num2}')
 
     nums = []
-    for i in range(num1, num2):
+    for i in range(num1+1, num2):
         if i % 2 == 0:
             nums.append(i)
     if 0 in nums:

@@ -17,6 +17,6 @@ def test_chess_castle(castle_coordinate_a: str, castle_coordinate_n: int, target
                           (ValueError,"a", 11, "a", 2),
                           (ValueError,"t", 1, "a", 2),
                           (ValueError,"a", 1, "a", 1)])
-def test_chess_castle_exception (expected_exception, c_coordinate_a, c_coordinate_n, t_coordinate_a, t_coordinate_n):
+def test_chess_castle_exception(expected_exception, c_coordinate_a, c_coordinate_n, t_coordinate_a, t_coordinate_n):
     with pytest.raises(expected_exception):
         chess_castle(c_coordinate_a, c_coordinate_n, t_coordinate_a, t_coordinate_n)

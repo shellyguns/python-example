@@ -3,6 +3,7 @@
 # from app.leap_year_app import main
 # from app.icecream_balls_app import main
 # from app.print_even_numbers_app import main
+
 # from app.dividers_app import main
 # from app.conditional_operator_apps.chess_castle_app import main
 # from app.conditional_operator_apps.horse_app import main
@@ -19,6 +20,7 @@ from app.cycles_apps.numsum_app import main
 # from app.lists_apps.reverse_app.reverse_app import main
 # from app.lists_apps.unique_app.unique_app import main
 # from app.lists_apps.num_sort_app.num_sort_app import main
+
 
 if __name__ == "__main__":
      main()

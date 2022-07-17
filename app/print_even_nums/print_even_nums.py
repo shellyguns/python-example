@@ -8,6 +8,7 @@ def print_even_nums(num1: int, num2: int):
 
     nums = []
     for i in range(num1+1, num2):
+
         if i % 2 == 0:
             nums.append(i)
     if 0 in nums:

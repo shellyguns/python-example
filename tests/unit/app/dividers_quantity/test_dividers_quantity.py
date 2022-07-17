@@ -7,7 +7,7 @@ from app.cycles.dividers_quantity.dividers_quantity import dividers_quantity
                                (3, 2),
                                (-4, 6)]
 )
-def test_dividers(number: int, dividers_quant: list):
+def test_dividers(number: int, dividers_quant: int):
     assert dividers_quant == dividers_quantity(number)
 
 

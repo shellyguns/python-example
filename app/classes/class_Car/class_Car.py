@@ -1,6 +1,6 @@
 class Driver:
-    full_name = None
-    experience = None
+    full_name: str = None
+    experience: str = None
 
     def __init__(self, full_name: str, experience: int):
         self.full_name = full_name
@@ -11,8 +11,8 @@ class Driver:
 
 
 class Engine:
-    power = None
-    manufacturer = None
+    power: int = None
+    manufacturer: str = None
 
     def __init__(self, power: int, manufacturer: str):
         self.power = power
@@ -23,11 +23,11 @@ class Engine:
 
 
 class Car:
-    brand = None
-    car_class = None
-    weight = None
-    driver = None
-    engine = None
+    brand: str = None
+    car_class: str = None
+    weight: int = None
+    driver: Driver = None
+    engine: Engine = None
 
     def __init__(self, brand: str, car_class: str, weight: int, driver: Driver, engine: Engine):
         self.brand = brand
@@ -54,7 +54,7 @@ class Car:
 
 
 class Lorry(Car):
-    carrying_capacity = None
+    carrying_capacity: int = None
 
     def __init__(self, brand: str, car_class: str, weight: int, driver: Driver, engine: Engine, carrying_capacity: int):
         super().__init__(brand, car_class, weight, driver, engine)
@@ -66,7 +66,7 @@ class Lorry(Car):
 
 
 class SportCar(Car):
-    max_speed = None
+    max_speed: int = None
 
     def __init__(self, brand: str, car_class: str, weight: int, driver: Driver, engine: Engine, max_speed: int):
         super().__init__(brand, car_class, weight, driver, engine)

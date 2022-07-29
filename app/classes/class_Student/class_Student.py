@@ -1,8 +1,8 @@
 class Student:
-    first_name = None
-    last_name = None
-    group = None
-    average_mark = None
+    first_name: str = None
+    last_name: str = None
+    group: str = None
+    average_mark: int = None
 
     def __init__(self, first_name: str, last_name: str, group: str, average_mark: int):
         self.first_name = first_name
@@ -18,7 +18,7 @@ class Student:
 
 
 class Aspirant(Student):
-    scientific_work = None
+    scientific_work: int = None
 
     def __init__(self, first_name: str, last_name: str, group: str, average_mark: int, scientific_work: int):
         super().__init__(first_name, last_name, group, average_mark)

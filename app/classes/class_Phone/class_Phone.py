@@ -1,17 +1,15 @@
 class Phone:
-    number = None
-    model = None
-    weight = None
-    name = None
-    calling_number = None
+    number: str = None
+    model: str = None
+    weight: int = None
 
-    def __init__(self, number: str, model: str, weight: str):
+    def __init__(self, number: str, model: str, weight: int):
         self.number = number
         self.model = model
         self.weight = weight
 
     def __str__(self):
-        return 'number = '+self.number + ', model = '+self.model + ', weight = '+self.weight
+        return f'number = {self.number} , model = {self.model}, weight = {self.weight}\n'
 
     def receive_call(self, name: str, calling_number: str = None):
         if not isinstance(name, str):
@@ -24,6 +22,14 @@ class Phone:
             return f'{name} is calling on {self.model} with number {calling_number}'
 
     def get_number(self):
+        if not isinstance(self.number, str):
+            raise TypeError(f'Argument "number" must be a string, not {type(self.number)}')
+        if not isinstance(self.model, str):
+            raise TypeError(f'Argument "model" must be a string, not {type(self.model)}')
+        if not isinstance(self.weight, int):
+            raise TypeError(f'Argument "weight" must be a integer, not {type(self.weight)}')
+        if self.number is None or self.model is None or self.weight is None:
+            raise ValueError(f'All parameters of phone should be defined')
         return self.number
 
     def send_message(self, *numbers: str):
@@ -34,12 +40,10 @@ class Phone:
 
 
 if __name__ == '__main__':
-    iphone = Phone("0935553535", "iPhone", "100")
-    samsung = Phone("0685553535", "Samsung", "110")
-    sony = Phone("0955553535", "SONY", "120")
-    print(iphone)
-    print(samsung)
-    print(sony)
+    iphone = Phone("0935553535", "iPhone", 100)
+    samsung = Phone("0685553535", "Samsung", 110)
+    sony = Phone("0955553535", "SONY", 120)
+    print(iphone, samsung, sony)
     print(iphone.receive_call("Volodya", "88005553535"))
     print(iphone.get_number())
     print(samsung.receive_call("Volodya"))
